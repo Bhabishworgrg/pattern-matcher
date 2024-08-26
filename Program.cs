@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 
 static bool MatchPattern(string line, string pattern)
