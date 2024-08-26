@@ -6,6 +6,12 @@ static bool MatchPattern(string line, string pattern)
 	return Regex.IsMatch(line, pattern);
 }
 
+if (args.Length == 0)
+{
+	Console.WriteLine("Pattern expected: Provide a regex pattern to match against.");
+	Environment.Exit(1);
+}
+
 string pattern = args[0];
 
 if (!Console.IsInputRedirected || Console.In.Peek() == -1)
